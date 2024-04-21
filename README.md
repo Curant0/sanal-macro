@@ -30,7 +30,7 @@ In the .json file you will give the groups any string name containing one of the
 | `random_wait` | Boolean | `false` | Random range to wait in the profile file. |
 | `random_pick` | Boolean | `false` | When it's false, it will execute the commands in order, otherwise they'll run randomly. |
 
-[random_pick usage](diagram.png)
+![random_pick usage](diagram.png)
 
 ## Setting up your profile
 
