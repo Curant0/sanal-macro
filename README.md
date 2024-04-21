@@ -28,9 +28,9 @@ In the .json file you will give the groups any string name containing one of the
 | `commands` | List of Strings | _semi-optional_ | Commands or messages to send |
 | `delay` | Integer | `30` | Time to wait in seconds. |
 | `random_wait` | Boolean | `false` | Random range to wait in the profile file. |
-| `random_pick | Boolean | `false` | When it's false, it will execute the commands in order, otherwise they'll run randomly. |
+| `random_pick` | Boolean | `false` | When it's false, it will execute the commands in order, otherwise they'll run randomly. |
 
-[insert some](image explaining random_pick)
+[random_pick usage](diagram.png)
 
 ## Setting up your profile
 
