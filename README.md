@@ -47,8 +47,8 @@ Not setting a Field will result in a error.
 
 ### Clone the repository
 ```bash
-git clone ---
-cd ./---
+git clone https://github.com/Curant0/sanal-macro
+cd ./sanal-macro
 ```
 
 ### Create and activate a virtual environment\*
