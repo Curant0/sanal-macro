@@ -82,5 +82,5 @@ This being a 1 day script, but any help and suggestions would be great!
 
 ## Give food to my cat!
 
-<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="Curant0" data-color="#5F7FFF" data-emoji="🐈" data-font="Lato" data-text="Support me!" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
+<a href="https://www.buymeacoffee.com/Curant0" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
