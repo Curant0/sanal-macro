@@ -13,7 +13,7 @@ Just a simple python script to send messages depending on time.
 
 In the .json file you will give the groups any string name containing one of the objects below.
 
-### Single command
+### Single command group format
 
 | Field | Type | Default |  Description |
 | -- | -- | -- | -- |
@@ -21,7 +21,7 @@ In the .json file you will give the groups any string name containing one of the
 | `delay` | Integer | `1` | Time to wait in seconds. |
 | `random_wait` | Boolean | `false` | Random range to wait in the profile file. |
 
-### Multiple commands
+### Multiple commands group format
 
 | Field | Type | Default | Description |
 | -- | -- | -- | -- |
@@ -35,7 +35,8 @@ In the .json file you will give the groups any string name containing one of the
 ## Setting up your profile
 
 Here you can set your own bindings, and the range of time that you wish to add to each message.
-Not setting a Field will result in a error.
+> [!CAUTION]
+> Not setting a **Field** will result in a error.
 
 | Field | Type | Description |
 | -- | -- | -- |
@@ -78,7 +79,7 @@ python main.py novaq novaq
 ```
 
 ## Issues
-This being a 1 day script, but any help and suggestions would be great!
+This being a 1 day script, I didn't gave too much effort to it, but any help and suggestions would be great!
 
 ## Give food to my cat!
 
