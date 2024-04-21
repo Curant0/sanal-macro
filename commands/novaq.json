@@ -1,0 +1,33 @@
+{
+  "10_09_group": {
+    "commands": [
+      "rpg tr",
+      "1",
+      "n",
+      "PAT PAT PAT FEED FEED FEED"
+    ],
+    "delay": 609,
+    "random_wait": true,
+    "random_pick": false
+  },
+  "hunt": {
+    "command": "rpg hunt h t",
+    "delay": 43,
+    "random_wait": true
+  },
+  "adventure": {
+    "command": "rpg adv h",
+    "delay": 2349,
+    "random_wait": true
+  },
+  "farm": {
+    "command": "rpg farm",
+    "delay": 400,
+    "random_wait": true
+  },
+  "dynamite": {
+    "command": "rpg dynamite",
+    "delay": 205,
+    "random_wait": true
+  }
+}
