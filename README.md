@@ -20,15 +20,18 @@ In the .json file you will give the groups any string name containing one of the
 | `command` | String | _semi-optional_ | The message or command that will be sent. |
 | `delay` | Integer | `1` | Time to wait in seconds. |
 | `random_wait` | Boolean | `false` | Random range to wait in the profile file. |
+| `random_time` | Float or Integer | _profile default_ | When set, it overrites the profile `random_time` |
 
 ### Multiple commands group format
 
-| Field | Type | Default | Description |
-| -- | -- | -- | -- |
-| `commands` | List of Strings | _semi-optional_ | Commands or messages to send |
-| `delay` | Integer | `30` | Time to wait in seconds. |
-| `random_wait` | Boolean | `false` | Random range to wait in the profile file. |
-| `random_pick` | Boolean | `false` | When it's false, it will execute the commands in order, otherwise they'll run randomly. |
+| Field            | Type            | Default         | Description                                                                             |
+|------------------|-----------------|-----------------|-----------------------------------------------------------------------------------------|
+| `commands`       | List of Strings | _semi-optional_ | Commands or messages to send                                                            |
+| `delay`          | Integer         | `30`            | Time to wait in seconds.                                                                |
+| `random_wait`    | Boolean         | `false`         | Random range to wait in the profile file.                                               |
+| `random_pick`    | Boolean         | `false`         | When it's false, it will execute the commands in order, otherwise they'll run randomly. |
+| `chain_step_time` | Integer         | null            | When set, it will set the time to wait for each chain step, plus a fraction.            | 
+| `random_time` | Float or Integer | _profile default_ | When set, it overrites the profile `random_time` |
 
 ![random_pick usage](diagram.png)
 

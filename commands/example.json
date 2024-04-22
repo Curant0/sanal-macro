@@ -5,7 +5,8 @@
       "messages",
       "in chain"
     ],
-    "delay": 1,
+    "delay": 8,
+    "chain_step_time": 1,
     "random_wait": true,
     "random_pick": false
   },

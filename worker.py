@@ -28,9 +28,14 @@ class Worker:
         except AttributeError:
             return key.name  # Type: ignore
 
-    def random_wait(self, wait_time: int, random_wait: bool):
-        random_time = random.uniform(0, self.settings['random_time']) if random_wait else 0
-        time.sleep(random_time + wait_time)
+    def random_wait(self, group):
+        if 'random_time' in group:
+            random_time = group['random_time']
+        else:
+            random_time = self.settings['random_time']
+
+        random_time = random.uniform(0, random_time) if group['random_wait'] else 0
+        time.sleep(random_time + group['wait_time'])
 
     def start_group(self, group: dict):
         is_peanut_active = True
@@ -41,7 +46,7 @@ class Worker:
 
             keyboard = Controller()
             if 'command' in group:
-                self.random_wait(group['delay'], group['random_wait'])
+                self.random_wait(group)
                 keyboard.type(group['command'])
                 keyboard.press(Key.enter)
                 keyboard.release(Key.enter)
@@ -51,18 +56,27 @@ class Worker:
                 if 'random_pick' in group:
                     random_pick = group['random_pick']
                 else:
-                    random_pick = False  # de-nest shit
+                    random_pick = False
 
                 if random_pick:
-                    self.random_wait(group['delay'], group['random_wait'])
+                    self.random_wait(group)
                     command = random.choice(commands)
                     keyboard.type(command)
                     keyboard.press(Key.enter)
                     keyboard.release(Key.enter)
 
                 else:
-                    for command in commands:
-                        self.random_wait(group['delay'], group['random_wait'])
+                    is_stepping = 'chain_step_time' in group
+                    if is_stepping:
+                        if group['chain_step_time'] < 1:
+                            raise ValueError('chain_step_time must be greater than 1')
+                        self.random_wait(group)
+
+                    for index, command in enumerate(commands):
+                        if not is_stepping:
+                            self.random_wait(group)
+                        if index > 0 and is_stepping:
+                            time.sleep(group['chain_step_time'] + random.random())
                         keyboard.type(command)
                         keyboard.press(Key.enter)
                         keyboard.release(Key.enter)
