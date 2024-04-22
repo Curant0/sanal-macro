@@ -75,7 +75,7 @@ With `command` and `profile` with the file names in their respective folders, wi
 
 **Example**
 ```bash
-python main.py novaq novaq
+python main.py my_commands my_config
 ```
 
 ## Issues
