@@ -35,8 +35,8 @@ class Worker:
             random_time = self.settings['random_time']
 
         random_time = random.uniform(0, random_time) if 'random_wait' in group else 0
-        wait_time = group['wait_time'] if 'wait_time' in group else 0
-        time.sleep(random_time + wait_time)
+        delay = group['delay'] if 'delay' in group else 0
+        time.sleep(random_time + delay)
 
     def start_group(self, group: dict):
         is_peanut_active = True
