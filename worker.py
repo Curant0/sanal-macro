@@ -34,7 +34,8 @@ class Worker:
         else:
             random_time = self.settings['random_time']
 
-        random_time = random.uniform(0, random_time) if group['random_wait'] else 0
+        random_time = random.uniform(0, random_time) if 'random_wait' in group else 0
+        wait_time = group['wait_time'] if 'wait_time' in group else 0
         time.sleep(random_time + group['wait_time'])
 
     def start_group(self, group: dict):
