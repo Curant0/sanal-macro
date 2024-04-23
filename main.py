@@ -15,9 +15,9 @@ def main(**kwargs):
         json.dump({'active': True}, file, indent=4)
 
     if worker.start_threads:
-        for group, commands in worker.commands.keys(), worker.commands.values():
-            print(f"Loaded group {group}")
-            thread = threading.Thread(target=worker.start_group, args=(commands,))
+        for name, group in worker.commands.items():
+            print(f"Loaded group {name}")
+            thread = threading.Thread(target=worker.start_group, args=(group,))
             threads.append(thread)
             thread.start()
 
