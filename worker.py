@@ -48,7 +48,9 @@ class Worker:
             keyboard = Controller()
             if 'command' in group:
                 self.random_wait(group)
-                keyboard.type(group['command'])
+                command = group['command']
+                print(f'Sending {command}')
+                keyboard.type(command)
                 keyboard.press(Key.enter)
                 keyboard.release(Key.enter)
 
@@ -62,6 +64,7 @@ class Worker:
                 if random_pick:
                     self.random_wait(group)
                     command = random.choice(commands)
+                    print(f'Sending {command}')
                     keyboard.type(command)
                     keyboard.press(Key.enter)
                     keyboard.release(Key.enter)
@@ -78,6 +81,7 @@ class Worker:
                             self.random_wait(group)
                         if index > 0 and is_stepping:
                             time.sleep(group['chain_step_time'] + random.random())
+                        print(f'Sending {command}')
                         keyboard.type(command)
                         keyboard.press(Key.enter)
                         keyboard.release(Key.enter)
