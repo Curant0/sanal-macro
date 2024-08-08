@@ -84,7 +84,4 @@ python main.py my_commands my_config
 ## Issues
 This being a 1 day script, I didn't gave too much effort to it, but any help and suggestions would be great!
 
-## Give food to my cat!
-
-<a href="https://www.buymeacoffee.com/Curant0" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
